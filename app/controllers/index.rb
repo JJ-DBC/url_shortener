@@ -11,14 +11,15 @@ get '/url/new_url' do
 end
 
 get '/user' do
-  @long_url = params[:long_url]
+  # Url.all(:long_url)
   # CRUD user data
-  # method(var)
+  # show all links
   erb :user
 end
 
 post '/' do
   @long_url = Url.create(:long_url => params[:long_url])
   #logic for short url!
+  #validate url
   redirect to("/user?url=#{params[:long_url]}")
 end
