@@ -18,6 +18,7 @@ get '/user' do
 end
 
 post '/' do
-  Url.create(:long_url => params[:long_url])
+  @long_url = Url.create(:long_url => params[:long_url])
+  #logic for short url!
   redirect to("/user")
 end
