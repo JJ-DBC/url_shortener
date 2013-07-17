@@ -2,5 +2,6 @@ class User < ActiveRecord::Base
   has_many :users_links
   has_many :urls, :through => :users_links
 
-  # Remember to create a migration!
+  validates :email, presence: true, uniqueness: true
+  validates :first_name presence: true
 end
