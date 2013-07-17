@@ -4,13 +4,20 @@ get '/' do
   erb :index
 end
 
-post '/' do
-  # Post form logic = link redirecting
+get '/url/new_url' do
+  @long_url = Url.create(params[:long_url])
+  erb :new_url
 end
 
-get '/usr/user_id' do
+get '/usr/:user_id' do
   # var = params[user_id]
   # CRUD user data
   # method(var)
-  # erb :view_user with data
+  erb :user
+end
+
+post '/' do
+  # @long_url = Url.create(params[:long_url])
+  # p params
+  # erb :index , !=request.xhr? , layout :false
 end
