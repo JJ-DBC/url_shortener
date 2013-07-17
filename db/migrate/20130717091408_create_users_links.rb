@@ -1,8 +1,8 @@
 class CreateUsersLinks < ActiveRecord::Migration
   def change
-    create_table :userslinks do |t|
-      t.string :user_id
-      t.string :url_id
+    create_table :users_urls do |t|
+      t.belongs_to :user
+      t.belongs_to :url
 
       t.timestamps
     end

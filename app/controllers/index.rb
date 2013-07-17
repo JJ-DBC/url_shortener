@@ -1,5 +1,5 @@
 get '/' do
-
+  p params
   # Main User Interface
   erb :index
 end
