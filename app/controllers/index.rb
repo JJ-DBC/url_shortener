@@ -1,5 +1,6 @@
 get '/' do
   p params
+  #Url.create(:long_url => params[:long_url])
   # Main User Interface
   erb :index
 end
@@ -9,7 +10,7 @@ get '/url/new_url' do
   erb :new_url
 end
 
-get '/usr/:user_id' do
+get '/user' do
   # var = params[user_id]
   # CRUD user data
   # method(var)
@@ -17,7 +18,6 @@ get '/usr/:user_id' do
 end
 
 post '/' do
-  # @long_url = Url.create(params[:long_url])
-  # p params
-  # erb :index , !=request.xhr? , layout :false
+  Url.create(:long_url => params[:long_url])
+  redirect to("/user")
 end
