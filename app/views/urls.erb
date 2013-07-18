@@ -1,16 +1,15 @@
 <div class="container">
-  <h1>All URLs</h1>
   <%= erb :_nav, layout: false %>    
+  <h1>All URLs</h1>
   <table>
     <tr>
       <td><code>
+        <ol>
         <% @urls.each do |url| %>
-        <p><%=url.long_url%></p>
+        <li><a target="_blank" href="/<%=url.id%>"><%=url.long_url%></a></li>
         <%end%>
-
+        </ol>
       </code></td>
     </tr>
   </table>
-
-  <p>The definition of insanity is doing the same thing over and over and expecting a different result.</p>
 </div>

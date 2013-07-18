@@ -15,8 +15,11 @@ end
 
 post '/' do
   @long_url = Url.create(:long_url => params[:long_url])
-  #validate url
-  #logic for short url!
+  # validate url:
+  # def url_valid?
+  #  url = URI.parse(url) rescue false
+  #  url.kind_of?(URI::HTTP) || url.kind_of?(URI::HTTPS)
+  # (something like this)
   redirect to("/user?long_url=#{params[:long_url]}")
 end
 

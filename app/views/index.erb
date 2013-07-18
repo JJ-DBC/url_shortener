@@ -1,17 +1,17 @@
 <div class="container">
-  <h1>Shrink It</h1>
   <%= erb :_nav, layout: false %>  
+  <h1>Get Shrunk</h1>
   <table>
     <tr>
       <td><code>
         <form action="/" method="POST">
           <label for="long_url">Form</label>
-          <input id="long_url" name="long_url" type="text" value="http://" />
-          <input type="submit" value="Shrink It!" />
+          <input size="38" id="long_url" name="long_url" type="text" value="http://" />
+          <input type="submit" value="Shrinken!" />
         </form>
       </code></td>
     </tr>
   </table>
 
-  <p>Enter URLs. Get shrunken ones back. Save them to your profile.</p>
+  <p>Enter long URLs, get shrunken ones back. Save to profile.</p>
 </div>
