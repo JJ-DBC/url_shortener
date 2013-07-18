@@ -22,5 +22,5 @@ end
 
 get '/:id' do
   @target_url = Url.find(params[:id])
-  redirect ("#{@target_url.long_url}") # [:long_url]}")
+  redirect ("#{@target_url.long_url}")
 end
