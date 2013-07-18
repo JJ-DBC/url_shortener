@@ -19,3 +19,8 @@ post '/' do
   #logic for short url!
   redirect to("/user?long_url=#{params[:long_url]}")
 end
+
+get '/:id' do
+  @target_url = Url.find(params[:id])
+  redirect ("#{@target_url.long_url}") # [:long_url]}")
+end
