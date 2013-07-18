@@ -1,11 +1,13 @@
 <div class="container">
-  <h1>Your Profile</h1>
-  <%= erb :_nav, layout: false %>  
-  
+  <h1>All URLs</h1>
+  <%= erb :_nav, layout: false %>    
   <table>
     <tr>
       <td><code>
-        <p><%= params %></p>
+        <% @urls.each do |url| %>
+        <p><%=url.long_url%></p>
+        <%end%>
+
       </code></td>
     </tr>
   </table>
