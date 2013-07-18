@@ -5,7 +5,12 @@
   <table>
     <tr>
       <td><code>
-        <p><%= params %></p>
+        <p>
+          <% if params[:usr] %>
+          Authentication? <%= params[:usr] %>
+          <% else %>
+          <%= params %>
+          <% end %></p>
       </code></td>
     </tr>
   </table>
